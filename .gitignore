@@ -5,3 +5,4 @@ loaded_models/*
 weights/*
 checkpoints/*
 data/*
+__pycache__/*

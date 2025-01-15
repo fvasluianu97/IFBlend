@@ -3,6 +3,8 @@
 This repository covers the "Towards Ambient Lighting Normalization" paper, accepted for publication at ECCV 2024. 
 Further materials covering our work will be available through this repo. Follow the current README for more resources. 
 
+# Results
+You can find a collection of output images [here](https://drive.google.com/drive/folders/1YeBwtbqAulr0ZMbKKhRn-5xC058D9V4k?usp=sharing). 
 # Checkpoints
 
 IFBlend checkpoints trained on AMBIENT6K are available [here](https://drive.google.com/file/d/1nNY1vF7mwVRWgTtdhJRmF5s9yGCAMZfm/view?usp=sharing).
