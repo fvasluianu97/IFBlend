@@ -1,8 +1,73 @@
 # IFBlend
 
-
 This repository covers the "Towards Ambient Lighting Normalization" paper, accepted for publication at ECCV 2024. 
 Further materials covering our work will be available through this repo. Follow the current README for more resources. 
+
+# Checkpoints
+
+IFBlend checkpoints trained on AMBIENT6K are available [here](https://drive.google.com/file/d/1nNY1vF7mwVRWgTtdhJRmF5s9yGCAMZfm/view?usp=sharing).
+
+# Installing
+ * Clone the current repository 
+
+    ```bash 
+   git clone https://github.com/fvasluianu97/IFBlend.git
+    ```
+ * Download the <code>checkpoints.zip</code> from [here](https://drive.google.com/file/d/1nNY1vF7mwVRWgTtdhJRmF5s9yGCAMZfm/view?usp=sharing) and unzip to the repository root directory. 
+ * Download the <code>weights.zip</code> from [here](https://drive.google.com/file/d/1rwv2G8tAboGEzEsczMMiSMzxCA1to3f7/view?usp=sharing) and unzip in the root directory of the repository. 
+ * Activate your Python virtual environment.
+ * Install the packages mentioned in <code>requirements.txt</code>.
+ * Test your IFBlend checkpoint:
+```bash
+   python eval.py --data_src ./data/AMBIENT6K --ckp_dir ./checkpoints --res_dir ./final-results --load_from IFBlend_ambient6k
+```
+
+# Data
+In the next section you can find the URLs for the training, testing, nad benchmark splits of the AMBIENT6K dataset. Download the available resources to a file tree similar to teh following structure:
+
+```
+.
+├── checkpoints
+│   └── IFBlend_ambient6k
+│       └── best
+│           └── checkpoint.pt
+├── data
+│   └── AMBIENT6K
+│       ├── Benchmarck
+│       ├── Test
+│       │   ├── 0_gt.png
+│       │   ├── 0_in.png
+│       │   ├── 1_gt.png
+│       │   └── 1_in.png
+│       └── Train
+│           ├── 0_gt.png
+│           ├── 0_in.png
+│           ├── 1_gt.png
+│           └── 1_in.png
+├── dataloader.py
+├── dconv_model.py
+├── eval.py
+├── final-results
+├── .gitignore
+├── ifblend.py
+├── laynorm.py
+├── loaded_models
+├── loss.py
+├── metrics.py
+├── model_convnext.py
+├── perceptual_loss.py
+├── README.md
+├── refinement.py
+├── requirements.txt
+├── train.py
+├── unet.py
+├── utils_model.py
+├── utils.py
+└── weights
+    └── convnext_xlarge_22k_1k_384_ema.pth
+
+```
+
 
 # AMBIENT6K
 The AMBIENT6K dataset is designed to drive the research in the field of Lightning Normalization, as a collection of 6000 
@@ -34,3 +99,14 @@ For reproducibility, we will upload the version used in our ablations here also.
 # Data Structure
 The RAW images are organized per scene. Each scene is noted in the metadata and each scene corresponds to a ground truth RAW image. 
 In the RGB data, each input image was paired to the corresponding ground-truth image.  
+
+# Acknowledgements
+The following repositories represented valuable resources in our work: 
+* https://github.com/megvii-research/NAFNet.git
+* https://github.com/fvasluianu97/WSRD-DNSR.git
+* https://github.com/liuh127/NTIRE-2021-Dehazing-DWGAN.git
+
+We thank the authors for sharing their work!
+
+
+
