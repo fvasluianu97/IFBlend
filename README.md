@@ -25,7 +25,7 @@ IFBlend checkpoints trained on AMBIENT6K are available [here](https://drive.goog
 ```
 
 # Data
-In the next section you can find the URLs for the training, testing, nad benchmark splits of the AMBIENT6K dataset. Download the available resources to a file tree similar to teh following structure:
+In the next section you can find the URLs for the training, testing, and benchmark splits of the AMBIENT6K dataset. Download the available resources to a file tree similar to the following structure:
 
 ```
 .
@@ -72,7 +72,7 @@ In the next section you can find the URLs for the training, testing, nad benchma
 
 
 # AMBIENT6K
-The AMBIENT6K dataset is designed to drive the research in the field of Lightning Normalization, as a collection of 6000 
+The AMBIENT6K dataset is designed to drive the research in the field of Lighting Normalization, as a collection of 6000 
 high resolution images representing images affected by non-homogeneous lighting distribution. For each affected image we propose
 a ground-truth image representing the same scene, but under near-perfect lighting conditions. The ground-truth images are 
 representations of canonical lighting, characteristic to a professional photography setup. 
